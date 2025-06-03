@@ -5,7 +5,7 @@ title: [Deep learning explained]
 description: [I try to explain deep learning topics as clearly as possible here.]
 incremental: false
 highlighter: rouge
-theme: academic-jekyll-theme
+theme: academic-jekyll-minimal
 
 gist:
   noscript: false
