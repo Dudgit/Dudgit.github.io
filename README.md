@@ -1,1 +1,1 @@
-This is my personal blog to gather my deep learning knowledge.
+Welcome here dear reader! If you ended up here it means you are interested in the world of deep learning but you don't know where to start.
