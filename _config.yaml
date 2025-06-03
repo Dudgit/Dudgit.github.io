@@ -1,7 +1,7 @@
 lsi: false
 safe: true
 source: [your repo's top level directory]
-title: [Dudás Blog]
+title: [Deep learning explained]
 description: [I try to explain deep learning topics as clearly as possible here.]
 incremental: false
 theme: academic-jekyll-theme
