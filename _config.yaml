@@ -4,7 +4,7 @@ source: [your repo's top level directory]
 title: [Dudás Blog]
 description: [Hi there I'm Bence, a PhD Student at Eötvös Loránd University, Budapest, Hungary. In this blog I try to gather my knowledge on deep learning and I'll try to gather all the knowledge I can find.]
 incremental: false
-theme: jekyll-theme-cayman
+theme: academic-jekyll-theme
 
 highlighter: rouge
 gist:
