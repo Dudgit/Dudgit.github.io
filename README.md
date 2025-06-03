@@ -2,9 +2,9 @@ Welcome here dear reader! If you ended up here it means you are interested in th
 
 
 
-[MLP](/MLP/)
-[Dimension reductions](/dim_red/)
-[Clustering methods](/clustering/)
-[Supervised learning](/suplearn/)
-[Tree based models](/trees/)
-[SVM](/svm/)
+[MLP](/MLP/)  
+[Dimension reductions](/dim_red/)  
+[Clustering methods](/clustering/)  
+[Supervised learning](/suplearn/)  
+[Tree based models](/trees/)  
+[SVM](/svm/)  
