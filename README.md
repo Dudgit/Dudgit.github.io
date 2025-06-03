@@ -1,1 +1,1 @@
-My blog
+This is my personal blog to gather my deep learning knowledge.
