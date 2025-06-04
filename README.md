@@ -3,16 +3,6 @@ Welcome here dear reader! If you ended up here it means you are interested in th
 
 $$X^2 + \sigma-\gamma$$  
 
-
-{% raw %}
-$$
-\int_{a}^{b} x^2 dx
-$$
-{% endraw %}
-
-\(\sigma-x^2 -\gamma\)  
-
-
 [Dimension reductions](/dim_red/)  
 [MLP](/MLP/)  
 [Clustering methods](/clustering/)  
