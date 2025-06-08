@@ -1,10 +1,12 @@
+---
+title: "Deep learning Blog"
+mathjax: true
+---
+
 Welcome here dear reader! If you ended up here it means you are interested in the world of deep learning, but you don't know where to start.
 
 
-**The Cauchy-Schwarz Inequality**\
-$$\begin{equation}
 
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \end{equation}$$
 
 $x^2 + 2$  
 [Dimension reductions](/dim_red/)  
