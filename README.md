@@ -1,5 +1,8 @@
 ---
-title: "Deep learning Blog"
+
+title: "Using MathJax in Jekyll"
+date: 2018-07-10
+tags: [MathJax, Mathematic]
 mathjax: true
 ---
 
