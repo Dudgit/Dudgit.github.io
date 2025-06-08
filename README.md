@@ -2,7 +2,9 @@ Welcome here dear reader! If you ended up here it means you are interested in th
 
 
 **The Cauchy-Schwarz Inequality**\
-$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+$$\begin{equation}
+
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \end{equation}$$
 
 $x^2 + 2$  
 [Dimension reductions](/dim_red/)  
