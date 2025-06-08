@@ -1,10 +1,3 @@
----
-
-title: "Using MathJax in Jekyll"
-date: 2018-07-10
-tags: [MathJax, Mathematic]
-mathjax: true
----
 
 Welcome here dear reader! If you ended up here it means you are interested in the world of deep learning, but you don't know where to start.
 
