@@ -6,6 +6,16 @@ description: [I try to explain deep learning topics as clearly as possible.]
 incremental: false
 theme:  jekyll-theme-cayman
 markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-include-cache
+  - jekyll-gist
+  - jekyll-paginate-v2
+  - jekyll-coffeescript
+  - jekyll-assets
 kramdown:
   input: GFM
   math_engine: mathjax
