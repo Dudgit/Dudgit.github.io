@@ -1,11 +1,14 @@
 ---
-layout: default
+layout: post
 permalink: /dim_red/
 title: Dimension Reduction
 ---
 
 
 # About dimension reduction
+$x = y^3$
+
+
 Sometimes handling data is not that easy as it sounds. As science grows we need to process more and more data, not just in the sense of observations but also in the sense of features. Often we can find structures and outliers if we plot the dataset, but sometimes it seems impossible because of its dimensionality. TODO: Add some more motivation and explanation.
 
 
