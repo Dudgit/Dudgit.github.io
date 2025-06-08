@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 permalink: /dim_red/
 title: Dimension Reduction
 mathjax: true
