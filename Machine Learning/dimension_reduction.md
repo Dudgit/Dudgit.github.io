@@ -2,6 +2,7 @@
 layout: post
 permalink: /dim_red/
 title: Dimension Reduction
+mathjax: true
 ---
 
 
