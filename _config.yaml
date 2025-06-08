@@ -8,9 +8,3 @@ theme:  jekyll-theme-cayman
 markdown: kramdown
 kramdown:
   math_engine: katex
-
-defaults:
-  - scope:
-      path: "_posts"
-    values:
-      layout: "posts"
