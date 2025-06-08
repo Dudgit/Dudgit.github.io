@@ -4,11 +4,6 @@
 </script>
 Welcome here dear reader! If you ended up here it means you are interested in the world of deep learning, but you don't know where to start.
 
-Here is some math:
-
-Inline math: $E = mc^2$
-
-Block math:
 
 $$
 \int_0^\infty e^{-x} dx = 1

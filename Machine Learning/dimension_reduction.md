@@ -5,9 +5,13 @@ title: Dimension Reduction
 mathjax: true
 ---
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 
 # About dimension reduction
-$x = y^3$
+$$x = y^3$$
 
 
 Sometimes handling data is not that easy as it sounds. As science grows we need to process more and more data, not just in the sense of observations but also in the sense of features. Often we can find structures and outliers if we plot the dataset, but sometimes it seems impossible because of its dimensionality. TODO: Add some more motivation and explanation.
@@ -20,7 +24,7 @@ Data is represented by tensors or in the simplest way with matricies. If you nee
 # Principal Component Analysis (PCA)
 PCA is a linear method to achieve dimension reduction. I belive in show don't tell, so let's make see the steps of this method and then try to understand it. Trust me it's going to be super easy, barely an inconvinience.
 
-- **Standardize data**: We want to calculate statistical properties that are meaningful only if we standardize the data. Standardize mean that we subtract the mean of a feature from every element of it and dived it with it's standard deviation. \(X_i = \frac{X_i -\mu_i}{\sigma_i}\), where \(i\) is the index of the features.
+- **Standardize data**: We want to calculate statistical properties that are meaningful only if we standardize the data. Standardize mean that we subtract the mean of a feature from every element of it and dived it with it's standard deviation. $$X_i = \frac{X_i -\mu_i}{\sigma_i}$$, where \(i\) is the index of the features.
 
 - **Compute covariance matrix**: \(\Sigma_{ij} = E[(X_i-\mu_i)(X_j-\mu_j)]\).
 
