@@ -43,4 +43,4 @@ PCA is a linear method to achieve dimension reduction. I belive in show don't te
 
 - **Select top 3-5 largest** We select the eigenvectors with the largest eigenvalues and they will be the bases for our new embedding space. We can convert all of our data into these embeddings.
 
-[Home]({{ '/' | relative_url }})
+[Back to Home](/)
