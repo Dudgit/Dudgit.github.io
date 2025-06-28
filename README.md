@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /home/
+titel: Deep Learning from the beginning.
 mathjax: true
 ---
 
