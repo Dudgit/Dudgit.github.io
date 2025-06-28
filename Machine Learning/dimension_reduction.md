@@ -30,7 +30,7 @@ The other good thing about dimension reduction is that it enables visualization.
 If you can turn a 100 dimensional problem into a 3 dimensional you can create nice figures about it. ![Dim red illustration](dimred.png)
 
 
-TODO: ins
+TODO: maybe have a better illustration.
 
 # Principal Component Analysis (PCA)
 PCA is a linear method to achieve dimension reduction. I belive in show don't tell, so let's make see the steps of this method and then try to understand it. Trust me it's going to be super easy, barely an inconvinience.
