@@ -4,7 +4,7 @@ source: [your repo's top level directory]
 title: [Deep Learning Blog]
 description: [I try to explain deep learning topics as clearly as possible.]
 incremental: false
-theme: jekyll-theme-modernist
+theme: jekyll-theme-minima
 markdown: kramdown
 kramdown:
   math_engine: katex
