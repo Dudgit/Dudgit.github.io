@@ -27,7 +27,8 @@ In general dimension reduction means that you take data and turn it into a lower
 Why do we want to reduce dimension? Very good question! And the answer can be multiple thing. One thing is that you can imagine that your computer has limitations. The more number it needs to process the more time it takes to do so.
 If you turn your data into something lower dimensional version of it, but with the similar expressiveness (the meaning of the data remains the same), it is very likely to arrive into the same conclusion.
 The other good thing about dimension reduction is that it enables visualization. Unfortunatelly we don't have good tools to visualize 100 dimensional data. We can define distances between them, and scientist talk about high dimensional spaces, but these seems very very abstract.
-If you can turn a 100 dimensional problem into a 3 dimensional you can create nice figures about it. ![Dim red illustration](dimred.png)
+If you can turn a 100 dimensional problem into a 3 dimensional you can create nice figures about it. For example you can create a visualization of how similar countries they are to each other based on many of their attributes (like location, economy, etc). ![Dim red illustration](dimred.png)
+*Figure 1: The visualization of how similar countries are with a lower dimensional representation.*
 
 
 TODO: maybe have a better illustration.
