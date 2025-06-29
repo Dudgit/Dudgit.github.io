@@ -17,12 +17,13 @@ mathjax: true
 
 {% include standardization.md %}
 
-
+<!---
+Maybe Later it should be added
 # Angle between vectors
 {% include vector_angle.md %}
-
+-->
 
 # Covariance
-To understand covariance matrix you will have to understand 
+{% include covariance.md %}
 
 [Back to Home](/)
