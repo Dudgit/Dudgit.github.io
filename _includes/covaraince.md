@@ -2,7 +2,8 @@ To understand covoriance let's break down the equation $$\Sigma_{ij} = E[(X_i-\m
 
 
 <p align="center">
-  <img src="/assets/images/hprices.png" alt="Fig 1: House prices based on their sizes. This is just an illustration, it has nothing to do with the real prices, it's just here to explain correlation." width="400"/>
+  <img src="/assets/images/hprices.png" alt="Description" width="400"/>
+   <figcaption>Fig 1: House prices based on their sizes. This is just an illustration, it has nothing to do with the real prices, it's just here to explain correlation.</figcaption>
 </p>
 
 The bigger the correlation in between the features the stronger this relation is. If the correlation is small to zero it means that the values can't be expressed with each other or they don't indicate any kind of relation. Correlation can be negative but its very much the same as it's positive version. The only difference is that if it's negative they always go to opposite direction. If one feature is getting smaller the other one is getting bigger.
