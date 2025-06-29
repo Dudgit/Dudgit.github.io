@@ -18,7 +18,7 @@ During my years of study I always had to face a problem that I suppose might be 
 # About me
 I'm a physics PhD student from Hungary. But wait, then why am I writing about deep learning? Actually I started to work with machine learning for my master thesis and ever since I'm doing my research in this area. TODO: add some more info about me later.
 
-
+[Basic math](/linalg/)
 [Dimension reductions](/dim_red/)  
 [MLP](/MLP/)  
 [Clustering methods](/clustering/)  
