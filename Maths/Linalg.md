@@ -26,8 +26,5 @@ Maybe Later it should be added
 # Covariance
 {% include covariance.md %}
 
-A sample correlation can be seen here:
-![House Prices](hprices.png)
-*Fig 1: House prices based on their sizes. This is just an illustration, it has nothing to do with the real prices, it's just here to explain correlation.*
 
 [Back to Home](/)
