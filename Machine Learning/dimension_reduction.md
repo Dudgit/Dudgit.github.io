@@ -34,11 +34,10 @@ If you can turn a 100 dimensional problem into a 3 dimensional you can create ni
 TODO: maybe have a better illustration.
 
 # Principal Component Analysis (PCA)
-PCA is a linear method to achieve dimension reduction. I belive in show don't tell, so let's make see the steps of this method and then try to understand it. Trust me it's going to be super easy, barely an inconvinience.
+PCA is a linear method to achieve dimension reduction. I belive in show don't tell, so let's make see the steps of this method and then try to understand it. Trust me it's going to be super easy, barely an inconvinience. I will include most of the math needed here but if you need a little bit more detailed explanation you can find [here](/linalg/)
 
 - **Standardize data**: We want to calculate statistical properties that are meaningful only if we standardize the data.
 {% include standardization.md %}
-
 
 
 - **Compute covariance matrix**: $$\Sigma_{ij} = E[(X_i-\mu_i)(X_j-\mu_j)]$$.
