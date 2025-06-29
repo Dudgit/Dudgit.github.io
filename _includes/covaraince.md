@@ -2,7 +2,7 @@ To understand covoriance let's break down the equation $$\Sigma_{ij} = E[(X_i-\m
 
 
 <p align="center">
-  <img src="/assets/images/hprices.png" alt="Description" width="400"/>
+  <img src="/assets/images/hprices.png" alt="Description" width="600"/>
    <figcaption>Fig 1: House prices based on their sizes. This is just an illustration, it has nothing to do with the real prices, it's just here to explain correlation.</figcaption>
 </p>
 
