@@ -24,3 +24,5 @@ mathjax: true
 
 # Covariance
 To understand covariance matrix you will have to understand 
+
+[Back to Home](/)
