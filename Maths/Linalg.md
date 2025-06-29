@@ -24,7 +24,7 @@ Maybe Later it should be added
 -->
 
 # Covariance
-{% include covariance.md %}
+{% include covaraince.md %}
 
 
 [Back to Home](/)
