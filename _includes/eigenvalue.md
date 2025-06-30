@@ -1,0 +1,3 @@
+In phyics we often find ourselves using this so called eigenvectors and eigenvalues. These expression are properties of a matrix, where they satisfy the following equation:  
+$$A **v** = \lambda **v**$$,  
+Where A is just a matrix and we want to solve the eigenvalue problem for it, **v** is our eigenvector and $$\lambda$$ is the eigenvalue belonging to the eigenvector. If we solve this equation we will end up with eigenvectors and eigenvalues belonging to them.

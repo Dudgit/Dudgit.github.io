@@ -31,12 +31,11 @@ If you can turn a 100 dimensional problem into a 3 dimensional you can create ni
 
 
 <p align="center">
-  <img src="/assets/images/dimred.png" alt="Description" width="600" height="600"/>
+  <img src="/assets/images/dimred.png" alt="Description" width="800" height="400"/>
    <figcaption>Figure 1: The visualization of how similar countries are with a lower dimensional representation.</figcaption>
 </p>
 
 
-TODO: maybe have a better illustration.
 
 # Principal Component Analysis (PCA)
 PCA is a linear method to achieve dimension reduction. I belive in show don't tell, so let's make see the steps of this method and then try to understand it. Trust me it's going to be super easy, barely an inconvinience. I will include most of the math needed here but if you need a little bit more detailed explanation you can find [here](/linalg/)
@@ -47,8 +46,13 @@ PCA is a linear method to achieve dimension reduction. I belive in show don't te
 
 - **Compute covariance matrix**: $$\Sigma_{ij} = E[(X_i-\mu_i)(X_j-\mu_j)]$$.
 
-- **Solve eigenvalue problem**: Find the eigenvectors and the corresponding eigenvectors for $$\Sigma$$.
+- **Solve eigenvalue problem**: Find the eigenvectors and the corresponding eigenvectors for $$\Sigma$$. {% include eigenvalue.md %} Good thing that these vector are orthogonal to each other, meaning they are in a different axis.
 
-- **Select top 3-5 largest** We select the eigenvectors with the largest eigenvalues and they will be the bases for our new embedding space. We can convert all of our data into these embeddings.
+- **Select top 3-5 largest** We select the eigenvectors with the largest eigenvalues and they will be the bases for our new embedding space. It only mean if we multiply our data points with these newly selected vectors (or put them into a matrix and do the matrix multiplication), our data points will be converted into a few dimensional version of itself, where few is determined by how much eigenvectors we chose. The new data we have is embedded, and we are happy.  
+ 
+PCA is an effective tool to compress our data into this lower dimensional version of it. We can use it to find outliers since it's much easier to detect datapoint that are very different from the others in lower dimension.
+<!---
+Illustratiooooonnnn
+-->
 
 [Back to Home](/)

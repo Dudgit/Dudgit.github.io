@@ -26,5 +26,7 @@ Maybe Later it should be added
 # Covariance
 {% include covaraince.md %}
 
+# Eigenvalues
+{% include eigenvalue.md %}
 
 [Back to Home](/)
