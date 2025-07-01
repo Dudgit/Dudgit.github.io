@@ -50,6 +50,7 @@ PCA is a linear method to achieve dimension reduction. I belive in show don't te
 
 - **Select top 3-5 largest** We select the eigenvectors with the largest eigenvalues and they will be the bases for our new embedding space. It only mean if we multiply our data points with these newly selected vectors (or put them into a matrix and do the matrix multiplication), our data points will be converted into a few dimensional version of itself, where few is determined by how much eigenvectors we chose. The new data we have is embedded, and we are happy.  
  
+Intuitively every eigenvector multiplies the data by its expressiveness (or with some kind of weight) and will give us a new number which created as a weighted sum of all the features, in other words we compress all the information into one number. Using multiple eigenvectors we will arrive at a new vector that express the same information, but with much less dimension.
 PCA is an effective tool to compress our data into this lower dimensional version of it. We can use it to find outliers since it's much easier to detect datapoint that are very different from the others in lower dimension.
 <!---
 Illustratiooooonnnn
