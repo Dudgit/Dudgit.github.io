@@ -55,5 +55,26 @@ PCA is an effective tool to compress our data into this lower dimensional versio
 <!---
 Illustratiooooonnnn
 -->
+# t-SNE
+The so called t-distributed Stochastic Neighbor Embedding. Even the name itself is so hard to understand you just want to skip this whole section. It happened to me when I was a student. We are in the same section so we already know that this is part of the dimension reduction/embedding part of machine learning. The problem with PCA is that some outliers can significantly reduce the visualization strength of the method. And an other thing it does not keep the hierarchical structure of our visualization. If we want to visualize how likely it is that kids will become friends and we have data like their interest, their age and their school we will probabbly end up with school as the most dominant feature, since other kids are less likely to meet at the first place. School (or geographical position) is a feature that is hierarchically important, but it does not determine friendship, just a good indicator if it's possible even or not. And yes there are excaptions to it too. All in all PCA is not the best for visualization, but it is very good to find outliers our use it's results as the features of a training. For visualization there is a method called t-SNE, which approaches this whole data reduction in a different way.  
+
+Let's say I have some high dimensional data. I want to know how likely it is that a certain data chose an other data point as it's neighbor. We don't actually look for the closes points, but we want to transform the distances with a kernel (Gaussian). This can be written in the following formula:  
+$$K(x_i,x_j) = exp(-\frac{|x_i -x_j|^2}{2\sigma_i^2}) $$ 
+Woah, we will need a little explanation. Let's start with the $$ \sigma $$ expression, which is just denotes for the standard deviation of our data, nothing fancy. The $$exp$$ is naturally the power of the euler number $$e$$. In the numerator we can alternatively write $$||x_i -x_j||$$, which means we want to calculate the distance, but the form I wrote I think it's easy to see. Now the whole pair chosing probability (What is the probability that i will chose j as it's pair) can be written as:  
+$$ p_{j|i} =  \frac{K(x_i,x_j)}{\sum_{k \neq i}K(x_i,x_k) } $$  
+If we work with probabilities we want the sum of our probabilities to be 1, so the easiest way to enforce it, that we divide every element with the sum of the elements. This is what the denominator is. So what we do is calculate this probability for every element or data point and this will give us a probability distribution.  
+
+<!---
+Distribution visualization
+-->
+
+<!---
+Add perplexity
+-->
+
+
+
+
+
 
 [Back to Home](/)
