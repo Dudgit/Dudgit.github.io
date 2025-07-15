@@ -18,5 +18,7 @@ mathjax: true
     * This course rely heavily on NVIDIA Teaching Kit materials, therefore I don't want to share the slides online.
 * Deep learning and machine learning in sciences; 2025 - present
 * Modern physics laboratory; 2024
+  
+Note: Slide style are combined with NVIDA teaching kit material, which I am allowed to do in theory. Or at least I was informed that way.
 
 [Back to Home](/)
