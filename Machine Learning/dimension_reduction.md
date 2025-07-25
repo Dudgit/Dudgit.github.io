@@ -56,15 +56,16 @@ PCA is an effective tool to compress our data into this lower dimensional versio
 Illustratiooooonnnn
 -->
 # t-SNE
-The so called t-distributed Stochastic Neighbor Embedding. Even the name itself is so hard to understand you just want to skip this whole section. It happened to me when I was a student. We are in the same section so we already know that this is part of the dimension reduction/embedding part of machine learning. The problem with PCA is that some outliers can significantly reduce the visualization strength of the method. And an other thing it does not keep the hierarchical structure of our visualization. If we want to visualize how likely it is that kids will become friends and we have data like their interest, their age and their school we will probabbly end up with school as the most dominant feature, since other kids are less likely to meet at the first place. School (or geographical position) is a feature that is hierarchically important, but it does not determine friendship, just a good indicator if it's possible even or not. And yes there are excaptions to it too. All in all PCA is not the best for visualization, but it is very good to find outliers our use it's results as the features of a training. For visualization there is a method called t-SNE, which approaches this whole data reduction in a different way.  
+The so called t-distributed Stochastic Neighbor Embedding. Even the name itself is so hard to understand you just want to skip this whole section. It happened to me when I was a student. We are in the same section so we already know that this is part of the dimension reduction/embedding part of machine learning. The problem with PCA is that some outliers can significantly reduce the visualization strength of the method. And an other thing it does not keep the hierarchical structure of our visualization. If we want to visualize how likely it is that kids will become friends and we have data like their interest, their age and their school we will probabbly end up with school as the most dominant feature, since other kids are less likely to meet at the first place. School (or geographical position) is a feature that is hierarchically important, but it does not determine friendship, just a good indicator if it's possible even or not. And yes there are exceptions to it too. All in all PCA is not the best for visualization, but it is very good to find outliers our use it's results as the features of a training. For visualization there is a method called t-SNE, which approaches this whole data reduction in a different way.  
 
 Let's say I have some high dimensional data. I want to know how likely it is that a certain data chose an other data point as it's neighbor. We don't actually look for the closes points, but we want to transform the distances with a kernel (Gaussian). This can be written in the following formula:  
 
 $$K(x_i,x_j) = exp(-\frac{|x_i -x_j|^2}{2\sigma_i^2}) $$   
 
-Woah, we will need a little explanation. Let's start with the $$ \sigma $$ expression, which is just denotes for the standard deviation of our data, nothing fancy. The $$exp$$ is naturally the power of the euler number $$e$$. In the numerator we can alternatively write $$||x_i -x_j||$$, which means we want to calculate the distance, but the form I wrote I think it's easy to see. Now the whole pair chosing probability (What is the probability that i will chose j as it's pair) can be written as:  
+Woah, we will need a little explanation. Let's start with the $$ \sigma $$ expression, which is just denotes for the standard deviation of our data, nothing fancy. The $$exp$$ is naturally the power of the Euler number $$e$$. In the numerator we can alternatively write $$||x_i -x_j||$$, which means we want to calculate the distance, but the form I wrote I think it's easy to see. Now the whole pair choosing probability (What is the probability that i will choose j as it's pair) can be written as:  
 $$ p_{j|i} =  \frac{K(x_i,x_j)}{\sum_{k \neq i}K(x_i,x_k) } $$  
 If we work with probabilities we want the sum of our probabilities to be 1, so the easiest way to enforce it, that we divide every element with the sum of the elements. This is what the denominator is. So what we do is calculate this probability for every element or data point and this will give us a probability distribution.  
+
 
 <!---
 Distribution visualization
@@ -73,10 +74,34 @@ Distribution visualization
 <!---
 Add perplexity
 -->
+We are almost there, but we have to survive a little bit more maths. In the lower dimensional version we want or values to have the same distances from each other. Or not exactly that, but something with similar meaning. We want our lower dimensional data to have this same distribution of neighbors as in the high dimensional case. The problem is that using a Gaussian kernel (the one we used earlier) is usually not the best option. Let me give you an alternative, the so called Student-t distribution.  
+
+<p align="center">
+  <img src="/assets/images/gauss_student.png" alt="Description" width="800" height="400"/>
+   <figcaption>Figure 2: Gaussian distribution and Student-t distribution.</figcaption>
+</p>
+
+Amazing, another way to create a slightly different figure! Understanding histograms is very easy, but tells us a lot about our data (or it's distribution). If we imagine it as an experiment on the x-axis we see what values we observed and on the y-axis we see how many times we did observe it. In other words we have the values and their quantity. But often we want it to be independent from the number of observations we had, or in other words we just want to get its density (which is just a normalized version of the count). As you can see in this case (with the right parameters) the Studen-t distribution is a bit wider and not as tall as the Gaussian (or in other name normal distribution). This means that if you transform numbers, using our new kernel, the outputs will have a bit higher probability to be a bigger number. When we want to visualize our data we want far away points to visualized far and close points to be close (in other words be as similar to the original one as possible), but we don't want them to ruin our visualization. If you put far away point too far that would make the closer point look even more close. This is called by the creators of the t-SNE algorithm as the crowding problem.   
+
+The overall process of the algorithm is very simple. We calculate $$ p_{j|i}$$ as we discussed above. Then randomly create low dimensional points (hence the name stochastic, which is just a fancy way to say random), that will correspond to the higher dimensional points. For these we also calculate a pair choosing distribution, but with the Studen-t kernel:  
+
+$$G(x_i,x_j) = (1+|x_i-x_j|^2)^{-1}$$  
+
+So the new points distribution is calculated as: $$q_{j|i} = \frac{G(x_i,x_j)}{\sum_{k \neq l } G(x_i,x_k)}$$  
+Naturally at the first step they will not likely to be similar, so we have to tune our low dimensional representation. Fortunately, we can compare distributions very easily. There is a metric called the Kullback-Leibler divergence, which aims to compare 2 distributions. And how much can one distribution express the other one. We compare our data with this method, which is the following calculation:  
+
+$$KL(P||Q) = \sum_{i \neq j} p{j|i} log(\frac{p_{j|i}}{q_{j|i}}) $$
+
+This will give us a number, a distance or a loss, depends on you how do you want to call it. In the end we just want to minimize this loss, so change the values of the lower dimensional representation, until this expression is as low as it is possible. 
+
+In a step-by-step guide to refresh the whole algorithm:
+* Calculate p distribution with Gaussian kernel on the data we want to embed.  
+* Randomly initialize lower dimensional data point (likely 2-3 dimensional).  
+* Compute the q distribution with the Student-t kernel.
+* Calculate the KL divergence between the two distribution.
+* Change low dimensional data to make the divergence smaller.
 
 
-
-
-
+*Note: We will not learn gradient descent here, we will talk about it in the deep learning session, so for first it will look like a bit magic.* 
 
 [Back to Home](/)
