@@ -90,7 +90,7 @@ $$G(x_i,x_j) = (1+|x_i-x_j|^2)^{-1}$$
 So the new points distribution is calculated as: $$q_{j|i} = \frac{G(x_i,x_j)}{\sum_{k \neq l } G(x_i,x_k)}$$  
 Naturally at the first step they will not likely to be similar, so we have to tune our low dimensional representation. Fortunately, we can compare distributions very easily. There is a metric called the Kullback-Leibler divergence, which aims to compare 2 distributions. And how much can one distribution express the other one. We compare our data with this method, which is the following calculation:  
 
-$$KL(P||Q) = \sum_{i \neq j} p{j|i} log(\frac{p_{j|i}}{q_{j|i}}) $$
+$$KL(P||Q) = \sum_{i \neq j} p_{j|i} log(\frac{p_{j|i}}{q_{j|i}}) $$
 
 This will give us a number, a distance or a loss, depends on you how do you want to call it. In the end we just want to minimize this loss, so change the values of the lower dimensional representation, until this expression is as low as it is possible. 
 
