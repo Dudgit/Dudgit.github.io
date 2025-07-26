@@ -64,7 +64,13 @@ $$K(x_i,x_j) = exp(-\frac{|x_i -x_j|^2}{2\sigma_i^2}) $$
 
 Woah, we will need a little explanation. Let's start with the $$ \sigma $$ expression, which is just denotes for the standard deviation of our data, nothing fancy. The $$exp$$ is naturally the power of the Euler number $$e$$. In the numerator we can alternatively write $$||x_i -x_j||$$, which means we want to calculate the distance, but the form I wrote I think it's easy to see. Now the whole pair choosing probability (What is the probability that i will choose j as it's pair) can be written as:  
 $$ p_{j|i} =  \frac{K(x_i,x_j)}{\sum_{k \neq i}K(x_i,x_k) } $$  
-If we work with probabilities we want the sum of our probabilities to be 1, so the easiest way to enforce it, that we divide every element with the sum of the elements. This is what the denominator is. So what we do is calculate this probability for every element or data point and this will give us a probability distribution.  
+If we work with probabilities we want the sum of our probabilities to be 1, so the easiest way to enforce it, that we divide every element with the sum of the elements. This is what the denominator is. So what we do is calculate this probability for every element or data point and this will give us a probability distribution.   
+
+Should we focus more on the local structures  or more on the global ones? This is very much your choice, when you are about to explore your data. To be able to tell our models what to focus on, we can define a new hyperparameter called perplexity. This is simply calculated as:  
+$$Perp(P_i) = 2^{H(P_i)}$$  
+where $$H(P_i)$$ is it's Shannon entropy, calculated as:
+$$H(P_I) = -\sum_j p_{j|i}log_2p_{j|i}$$
+So what we do is give a number to our algorithm, that will tell our model how much should it concentrate on the local or the global structures, this is the perplexity. The model will change $$\sigma$$ until our the perplexity of our distribution is the same as the perplexity we defined. Smaller perplexity will force our methods to concentrate more on the local structures.
 
 
 <!---
