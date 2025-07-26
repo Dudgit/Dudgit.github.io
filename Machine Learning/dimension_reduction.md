@@ -34,7 +34,8 @@ If you can turn a 100 dimensional problem into a 3 dimensional you can create ni
   <img src="/assets/images/dimred.png" alt="Description" width="800" height="400"/>
    <figcaption>Figure 1: The visualization of how similar countries are with a lower dimensional representation.</figcaption>
 </p>
-
+  
+In the followig chapter I'll explain 2 major dimension reduction method. In reality there are many of them you can chose and maybe I'll update this later to include some more. There are methods that will be not included here, for example embedding with deep neural network, since they belong to a different section. This two method is a very good starting point in my oppinion what is the basic idea behind dimension reduction.
 
 
 # Principal Component Analysis (PCA)
