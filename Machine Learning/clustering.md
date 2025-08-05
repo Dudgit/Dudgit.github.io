@@ -23,6 +23,21 @@ It is important to mention, that this method can be very sensitive to outliers o
  - **Know your data**: This is partially belong the the previous advice, but having domain knowledge will always help you understand if these points are meaningful or you just need to drop them.
  - **Standardize**: As I gather more and more experience in machine learning I start to belive it's always a go to. If you standardize your data, you will get rid of the different scaling problem.
 # Hierarchical
+This one is super easy, since it does not require tons of equations. In hierarchical clustering we start from a lot of data points, which we want to connect into clusters. As the first step we connect every data point with its closest neighbor. We will repeat this step until we arrive with one big cluster, that includes ever point. We only have to decide what should we call distance when we have more than one data point. - Keep in mind having 1 data point means only 1 observed data, it does not specify the dimensionality of the points, these can be vectors with 100 or 1000 entries. - The most common approach is just to use the Euclidean distance of these new clusters, which is:  
+
+$$ 
+d(a, b) = \sqrt{\sum_i(a_i-b_i)^2},
+$$  
+
+Where $$a$$ and $b$ are cluster of data points and $$i$$ indexing through their elements. If it makes sense to your work, you can define different metrics, like the average of all possible pair distance or the closest two element between 2 clusters. The only question is, when should I stop building these clusters? 
+<!---
+Illustratiooooonnnn
+ We just define a good distance metric and we start to connect things. Defining distances is a new thing to you? Fear no more, if you got so far this one will be a peace of cake. Naturally when we are talking about distance we talk about the Euclidean distance, which is the square root of the summed square distances. Meaning that if I have a data point with multiple dimension and I want to check it's distance from an other one I calculate the following:
+$$
+d(a, b) = \sqrt{\sum_i(a_i-b_i)^2},
+$$
+where i is just the index to go through every dimension of our data points, $$a$$ and $$b$$ are the data points that I want to compare. This is the metric people usually use, but just because it's the most common doesn't mean it's the only one.  
+-->
 # Metrics
 
 [Back to Home](/)
