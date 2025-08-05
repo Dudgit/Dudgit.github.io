@@ -22,6 +22,6 @@ mathjax: true
 Note: Slide style are combined with NVIDA teaching kit material, which I am allowed to do in theory. Or at least I was informed that way.
 
 For Physics PhD Stuendts in the Eötvös University, I have created an exam preparation material for complex exam. 
-[Complex exam material](ML_Komplex_exam.pdf)
+[Complex exam material](https://drive.google.com/file/d/1R4RKFOq_tVGLSZFFAECiPmnKjeOfliv7/view?usp=drive_link)
 
 [Back to Home](/)
