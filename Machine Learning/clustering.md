@@ -38,11 +38,12 @@ where i is just the index to go through every dimension of our data points, $$a$
 # Metrics
 In clustering a common problem is how to determine the number of clusters we will create. I will tell you about two methods that are very popular. The firs one is the so called Elbow method. We start with one cluster only and then calculate the sum of all distances from the center (or the mean of the cluster). We will end up with a value that will represent the clustering with using one cluster. Then we use 2 clusters for the algorithm, calculate this value and repeat it. Intuitively we would expect that the more cluster we add, the smaller this sum will be. Imagine you want to group the stars you can see on the sky. If you put them into one group, there will be some that are very very far away from the center of the middle. If you put them into 2 groups, the sum of the distances will be significantly smaller. In the ELBOW method we want to increase the number of clusters until we reach a point, where a new center will have only a small effect on the sum. The name elbow is coming from its visualization. The point where we reach the optimal number of clusters looks like an elbow.
 
-The other method, called the Silhouette is very similar to this one. We want to calculate the average distance inside the cluster $$a(i)$$ and the average distance compared to outside the cluster $$b(i)$$. Here $$i$$ indicate the index of a specific data point. The Silhouette score for a data point $$i$$ will be:  
-
+The other method, called the Silhouette is very similar to this one. We want to calculate the average distance inside the cluster $$a(i)$$ and the average distance compared to outside the cluster $$b(i)$$. Here $$i$$ indicate the index of a specific data point. The Silhouette score for a data point $$i$$ will be:   
+  
 $$
 s(i) = \frac{b(i)-a(i)}{max(a(i),b(i))},
 $$
+
 where $$max(a(i),b(i))$$ means we will chose the biggest value from the two. In the Silhouette method we want to maximize this $$s(i)$$ value, by choosing the right amount of clusters.
 
 
