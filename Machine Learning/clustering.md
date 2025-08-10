@@ -31,13 +31,17 @@ $$
 
 Where $$a$$ and $b$ are cluster of data points and $$i$$ indexing through their elements. If it makes sense to your work, you can define different metrics, like the average of all possible pair distance or the closest two element between 2 clusters. The only question is, when should I stop building these clusters? 
 <!---
-Illustratiooooonnnn
- We just define a good distance metric and we start to connect things. Defining distances is a new thing to you? Fear no more, if you got so far this one will be a peace of cake. Naturally when we are talking about distance we talk about the Euclidean distance, which is the square root of the summed square distances. Meaning that if I have a data point with multiple dimension and I want to check it's distance from an other one I calculate the following:
+ We just define a good distance metric and we start to connect things. Defining distances is a new thing to you? Fear no more, if you got so far this one will be a peace of cake. Naturally when we are talking about distance we talk about the Euclidean distance, which is the square root of the summed square distances. Meaning that if I havhote a data point with multiple dimension and I want to check it's distance from an other one I calculate the following:
 $$
 d(a, b) = \sqrt{\sum_i(a_i-b_i)^2},
 $$
 where i is just the index to go through every dimension of our data points, $$a$$ and $$b$$ are the data points that I want to compare. This is the metric people usually use, but just because it's the most common doesn't mean it's the only one.  
 -->
 # Metrics
+Here I will present you 2 very common method to decide what is the ideal number of clusters. The goal here is not to cover all possible methods, but to understand how to approach these kind of problems.
+
+Let's start first with the so called ELBOW method. We simply just calculate the average in the cluster (or the centroid in K-means clustering) and we sum up the distances from it. We check this value if we only had one cluster, then for two and three and so on. Intuitively as you increase the number of clusters the sum of total distances is going to decrease, since there are more point to cover all the data.
+
+
 
 [Back to Home](/)
