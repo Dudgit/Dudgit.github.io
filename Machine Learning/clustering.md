@@ -12,8 +12,6 @@ mathjax: true
 # About clustering
 Clustering is an umbrella term for algorithms that will do unsupervised classification. Unsupervised meaning that the results are not definitive, they are not labelled. Similarly to [dimension reduction](/dim_red/) we can't test our results in validation dataset, to be able tell how good our method is. Although we can have metrcis to approximate how good our method is, but more about this later.
 
-### To be continued...
-
 # K-means
 This method is so easy I'm not even sure you will ever get here to read it. In K-means the parameter of our model is how many clusters I want to end up. The number of clusters is denoted by K. For simplicity let's say this is three, so K=3. We have our data that we want to cluster and we place 3 (or K in general) points randomly in their space. If they are 2 dimensional points we will choose 2 numbers as their position, if they are 6 dimensional points we will 6 numbers as their position and so on. After we dropped these points, often called centroiods, we will calculate the distance of every data points from these new points. Based on the distance of the 3 new points we will label every original data. Every point will belong to a cluster of a centroid, that is the closest to them. The cluster positions are defined randomly in the beginning, so we have to do something to optimize it right. For the next step we will calculate the mean of every of the positions of every cluster and place a new centroid there. We will calculate the distances again, re-label the data points and repeat the whole process until the centroid of the clusters are converged.  
 
@@ -38,9 +36,7 @@ $$
 where i is just the index to go through every dimension of our data points, $$a$$ and $$b$$ are the data points that I want to compare. This is the metric people usually use, but just because it's the most common doesn't mean it's the only one.  
 -->
 # Metrics
-Here I will present you 2 very common method to decide what is the ideal number of clusters. The goal here is not to cover all possible methods, but to understand how to approach these kind of problems.
-
-Let's start first with the so called ELBOW method. We simply just calculate the average in the cluster (or the centroid in K-means clustering) and we sum up the distances from it. We check this value if we only had one cluster, then for two and three and so on. Intuitively as you increase the number of clusters the sum of total distances is going to decrease, since there are more point to cover all the data.
+In clustering a common problem is how to determine the number of clusters we will create. I will tell you about two methods that are very popular. The firs one is the so called Elbow method.
 
 
 

@@ -19,5 +19,5 @@ During my years of study I always had to face a problem that I suppose might be 
 [Topics](/topics/)
 
 # About me
-I'm a physics PhD student from Hungary. But wait, then why am I writing about deep learning? Actually I started to work with machine learning for my master thesis and ever since I'm doing my research in this area. At the end of my masters I started to teach the basic concept of deep learning end ever since I teach more and more lectures. I will try to gather all of my teaching materials and experiences in one place, so you can find the theory.
+I'm a physics PhD student from Hungary. But wait, then why am I writing about deep learning? Actually I started to work with machine learning for my master thesis and ever since I'm doing my research in this area. At the end of my masters I started to teach the basic concept of deep learning end ever since I teach more and more lectures. I will try to gather all of my teaching materials and experiences in one place, so you can find the theory.  
 [Teachings](/teachings/)
