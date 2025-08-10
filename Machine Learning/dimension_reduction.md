@@ -109,6 +109,7 @@ In a step-by-step guide to refresh the whole algorithm:
 * Change low dimensional data to make the divergence smaller.
 
 
-*Note: We will not learn gradient descent here, we will talk about it in the deep learning session, so for first it will look like a bit magic.* 
-
+*Note: We will not learn gradient descent here, we will talk about it in the deep learning session, so for first it will look like a bit magic.*   
+[Next topic (clustering)](/clustering/)  
+[Topics](/topics/)  
 [Back to Home](/)

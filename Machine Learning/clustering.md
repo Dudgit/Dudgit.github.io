@@ -45,6 +45,5 @@ s(i) = \frac{b(i)-a(i)}{max(a(i),b(i))},
 $$
 
 where $$max(a(i),b(i))$$ means we will chose the biggest value from the two. In the Silhouette method we want to maximize this $$s(i)$$ value, by choosing the right amount of clusters.
-
-
+[Topics](/topics/)  
 [Back to Home](/)
